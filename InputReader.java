@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -11,15 +12,7 @@ import java.util.Scanner;
  */
 public class InputReader
 {
-    private Scanner reader;
-
-    /**
-     * Create a new InputReader that reads text from the text terminal.
-     */
-    public InputReader()
-    {
-        reader = new Scanner(System.in);
-    }
+    private static Scanner reader = new Scanner(System.in);
 
     /**
      * Read a line of text from standard input (the text terminal),
@@ -27,7 +20,7 @@ public class InputReader
      *
      * @return  A String typed by the user.
      */
-    public String getString(String prompt)
+    public static String getString(String prompt)
     {
         String inputLine = null;
         boolean isValid = false;
@@ -40,7 +33,7 @@ public class InputReader
             if(!inputLine.isEmpty())
                 isValid = true;
             else 
-                System.out.println("\nYour input is blank!\n");
+                System.out.println("\nYour input is empty!\n");
         }
 
         return inputLine;
@@ -52,7 +45,7 @@ public class InputReader
      * 
      * @return Integer typed by user.
      */
-    public int getInt(String prompt)
+    public static int getInt(String prompt)
     {
         int number = 0;
         boolean isValid = false;
@@ -60,16 +53,46 @@ public class InputReader
         while(!isValid)
         {
             System.out.print(prompt);         // print prompt
-            number = reader.nextInt();
-            
-            if(number > 0)
+            try
             {
-                isValid = true;
+                number = reader.nextInt();
+
+            } 
+            catch(InputMismatchException e)
+            {
+                System.out.println("That is not a valid integer number!");
             }
-            else 
-                System.out.println("Your value is less than zero!");
+        }       
+        return number;
+    }
+
+    /**
+     * Read a the next int from standard imput (the text terminal),
+     * and return it as an interger.
+     * 
+     * @return Integer typed by user.
+     */
+    public static double getDouble(String prompt)
+    {
+        double number = 0;
+        boolean isValid = false;
+        
+        while(!isValid)
+        {
+            System.out.print(prompt);         // print prompt
+            
+            try
+            {
+                number = reader.nextDouble();
+
+            } 
+            catch(InputMismatchException e)
+            {
+                System.out.println("That is not a valid double number!");
+            }
         }
 
         return number;
     }
+
 }

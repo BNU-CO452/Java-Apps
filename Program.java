@@ -2,7 +2,7 @@ public class Program
 {
     public static void main(String[] args)
     {
-        System.out.println(ConsoleColours.ANSI_BG_PURPLE);
+        System.out.println(ConsoleColours.ANSI_BRIGHT_BG_PURPLE);
         System.out.println(ConsoleColours.ANSI_BRIGHT_BG_YELLOW);
         System.out.println(ConsoleColours.CONSOLE_CLEAR);
 
