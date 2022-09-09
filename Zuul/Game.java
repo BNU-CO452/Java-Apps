@@ -1,3 +1,5 @@
+package Zuul;
+
 /**
  *  This class is the main class of the "World of Zuul" application. 
  *  "World of Zuul" is a very simple, text based adventure game.  Users 
@@ -18,23 +20,22 @@
 
 public class Game 
 {
-    public final Map MAP;
-    private CommandReader reader;
+    public static final Map MAP = new Map();
+    private CommandReader reader ;
     private boolean gameOver;
         
     /**
      * Create the game and initialise its internal map.
      */
     public Game() 
-    {
-        MAP = new Map();
+    { 
         reader = new CommandReader(this);
     }
 
     /**
      *  Main play routine.  Loops until end of play.
      */
-    public static void main(String args) 
+    public void run() 
     {            
         printWelcome();
         gameOver = false;
@@ -53,7 +54,7 @@ public class Game
     /**
      * Print out the opening message for the player.
      */
-    private void printWelcome()
+    private static void printWelcome()
     {
         System.out.println();
         System.out.println(" Welcome to the World of Zuul!");

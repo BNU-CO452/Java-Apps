@@ -1,4 +1,4 @@
-
+package Zuul;
 /**
  * This class is reponsible for creating and
  * linking all the Locations in the game to

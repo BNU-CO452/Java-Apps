@@ -1,6 +1,6 @@
+package Zuul;
 import java.util.Set;
 import java.util.HashMap;
-i
 
 /**
  * Class Location - a location on the map of an adventure game.

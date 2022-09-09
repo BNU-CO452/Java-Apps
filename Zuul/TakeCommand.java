@@ -1,4 +1,4 @@
-
+package Zuul;
 /**
  * This command allows the player to
  * take or pickup an item from a room
