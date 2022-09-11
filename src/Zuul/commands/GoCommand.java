@@ -1,4 +1,9 @@
-package Zuul;
+package Zuul.commands;
+
+import Zuul.Game;
+import Zuul.Location;
+import Zuul.Map;
+
 /**
  * This command transfers the player from
  * one location to another location provided the
@@ -26,7 +31,7 @@ public class GoCommand extends ZuulCommand
             return;
         }
 
-        Map map = zuul.MAP;
+        Map map = new Map();
         
         // Try to leave current room.
         Location currentLocation = map.getCurrentLocation();

@@ -1,4 +1,7 @@
-package Zuul;
+package Zuul.commands;
+
+import Zuul.Game;
+
 /**
  * This class is part of the "World of Zuul" application. 
  * "World of Zuul" is a very simple, text based adventure game.  

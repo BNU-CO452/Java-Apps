@@ -51,7 +51,6 @@ public class Map
     private void createOutside()
     {
         outside = new Location("outside the main entrance of the university");
-        
     }
     
     /**
@@ -82,7 +81,6 @@ public class Map
     private void createOffice()
     {
         office = new Location("in the computing admin office");
-        
     }
     
     /**

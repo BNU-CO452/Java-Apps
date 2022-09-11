@@ -1,5 +1,5 @@
 
-package Zuul;
+package Zuul.commands;
 /**
  * This contains all the possible command words
  * for the game of Zuul

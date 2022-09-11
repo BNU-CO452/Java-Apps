@@ -1,5 +1,7 @@
-package Zuul;
-import java.util.ArrayList;
+package Zuul.commands;
+
+import Zuul.Game;
+
 /**
  * Write a description of class HelpCommand here.
  *

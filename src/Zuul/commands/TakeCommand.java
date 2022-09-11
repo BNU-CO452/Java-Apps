@@ -1,4 +1,8 @@
-package Zuul;
+package Zuul.commands;
+
+import Zuul.Game;
+import Zuul.Map;
+
 /**
  * This command allows the player to
  * take or pickup an item from a room
@@ -32,6 +36,7 @@ public class TakeCommand extends ZuulCommand
         }
 
         Map map = zuul.MAP;
+        map.getCurrentLocation();
         // remove the item from the current room
         // and add it to the player's inventory
         // Print out a suitable message.

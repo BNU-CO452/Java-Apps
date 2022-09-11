@@ -1,5 +1,7 @@
 package Zuul;
 
+import Zuul.commands.CommandReader;
+
 /**
  *  This class is the main class of the "World of Zuul" application. 
  *  "World of Zuul" is a very simple, text based adventure game.  Users 
@@ -21,6 +23,7 @@ package Zuul;
 public class Game 
 {
     public static final Map MAP = new Map();
+
     private CommandReader reader ;
     private boolean gameOver;
         
@@ -29,6 +32,7 @@ public class Game
      */
     public Game() 
     { 
+        //MAP = new Map();
         reader = new CommandReader(this);
     }
 
@@ -61,6 +65,7 @@ public class Game
         System.out.println(" World of Zuul is a new, incredibly boring adventure game.");
         System.out.println(" Type 'help' if you need help.");
         System.out.println();
+
         System.out.println(MAP.getCurrentLocation().getLongDescription());
     }
 }
