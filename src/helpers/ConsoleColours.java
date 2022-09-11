@@ -1,3 +1,5 @@
+package helpers;
+
 /**
  * Write a description of class ConsoleColours here.
  *

@@ -1,5 +1,6 @@
 package Week1;
 
+import helpers.InputReader;
 public class Week1 
 {
     public static final String CONSOLE_CLEAR = "\033[H\033[2J";
@@ -15,5 +16,8 @@ public class Week1
         System.out.println();
         System.out.println(" by Nicholas Day and Derek Peacock");
         System.out.println();
+
+        String name = InputReader.getString("Enter your name > ");
+        System.out.println("Hello " + name);
     } 
 }
