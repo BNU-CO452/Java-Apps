@@ -36,6 +36,6 @@ public class HelpCommand extends ZuulCommand
         System.out.println();
         System.out.println(" e.g. go west, take gold");
         System.out.println();
-        System.out.println(zuul.MAP.getCurrentLocation().getLongDescription());
+        System.out.println(Game.MAP.getCurrentLocation().getLongDescription());
     }
 }

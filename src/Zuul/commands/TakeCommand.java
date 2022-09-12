@@ -35,7 +35,7 @@ public class TakeCommand extends ZuulCommand
             return;
         }
 
-        Map map = zuul.MAP;
+        Map map = Game.MAP;
         map.getCurrentLocation();
         // remove the item from the current room
         // and add it to the player's inventory
