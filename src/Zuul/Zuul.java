@@ -15,6 +15,7 @@ public class Zuul
         System.out.println("==================================");
         System.out.println();
         System.out.println("by Michael Kölling and David J. Barnes ");
+        System.out.println("Book (2016): Objects First with Java ");
         System.out.println();
 
         game.run();
