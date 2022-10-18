@@ -46,7 +46,35 @@ public class InputReader
 
         return inputLine;
     }
-    
+    public static char getChar(String prompt)
+  {
+     char c = ' ';
+     boolean ok = false;
+
+     while(!ok)
+     {
+        System.out.print(prompt); 
+        try
+        {
+           bytesRead = System.in.read(b);
+           s = new String(b,0,bytesRead-1);
+           if(s.trim().length()!=1)
+           {
+             System.out.println("Make sure you enter a single character");
+           }
+           else
+           {
+                c = s.trim().charAt(0);
+                ok = true;
+           }
+        }
+        catch(IOException e)
+        {
+            System.out.println(e.getMessage());
+        }
+     }
+     return c;
+  }
     /**
      * Read a the next int from standard imput (the text terminal),
      * and return it as an interger.
