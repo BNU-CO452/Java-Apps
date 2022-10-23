@@ -13,6 +13,12 @@ public class Mario extends Actor
     public Mario()
     {
         image = getImage();
-        image.scale(30, 30);
+        int size = MarioWorld.TILE_SIZE;
+        image.scale(size, size);
+    }
+    
+    public void act()
+    {
+        move(1);
     }
 }
