@@ -44,7 +44,7 @@ public class MarioWorld extends World
     private void drawPath()
     {
         int yStart = MAXN_ROWS - 1; // 19
-        int yEnd = MAXN_ROWS - GROUND_ROW + 1; // 18
+        int yEnd = GROUND_ROW + 1; // 18
         
         for(int y = yStart; y >= yEnd; y--)
         {
