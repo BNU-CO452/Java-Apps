@@ -1,13 +1,18 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MyWorld here.
+ * In this game the player controls a crab which
+ * can move around the world and eat worms.  There
+ * is a lobster in the world that can eat crabs if
+ * it intersects with a crab.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
 public class CrabWorld extends World
 {
+    public static final int MAX_WIDTH = 800;
+    public static final int MAX_HEIGHT = 600;
     public static final int MAXN_WORMS = 20;
     
     private Crab crab;
@@ -26,7 +31,7 @@ public class CrabWorld extends World
     public CrabWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(800, 600, 1); 
+        super(MAX_WIDTH, MAX_HEIGHT, 1); 
         
         crab = new Crab();
         addObject(crab, 200, 200);
@@ -54,7 +59,7 @@ public class CrabWorld extends World
      * This method creates & adds a single worm to a random position in
      * the world that is not too near the edge of the screen
      */
-    private void createWorm(int number)
+    private void createWorm()
     {
     }
     
@@ -68,8 +73,13 @@ public class CrabWorld extends World
         addObject (score, 60, 30);
     }
     
-    public void endGame()
+    public void loseGame()
     {
         showText("Game Over: You have Lost!", 400, 300);
     }
+    public void winGame()
+    {
+        showText("Game Over: You have Won!", 400, 300);
+    }
+    
 }
