@@ -8,7 +8,7 @@ import java.util.List;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Lobster extends Actor
+public class Lobster extends Animal
 {
     private int speed = 2;
     private Random generator = new Random();
