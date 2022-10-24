@@ -1,10 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MovingSprite here.
+ * The Crab can move in two different ways, either
+ * in four directions, Up, Down, Left or Right or 
+ * by turning and moving in the direction of the turn.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Derek Peacock 
+ * @version 0.2
  */
 public class Crab extends Animal
 {
@@ -24,6 +26,7 @@ public class Crab extends Animal
         
         width = image.getWidth();
         height = image.getHeight();
+        
         image.scale((int)(width * 0.8), (int)(height * 0.8));
         
         setRotation(90);

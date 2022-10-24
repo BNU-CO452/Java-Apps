@@ -20,12 +20,14 @@ public class Animal extends Actor
      */
     public void move()
     {
-        move(WALKING_SPEED);
+        while(!atWorldEdge())
+            move(WALKING_SPEED);
     }
 
     
     /**
-     * Test if we are close to one of the edges of the world. Return true if we are.
+     * Test if we are close to one of the edges of the world. 
+     * Return true if we are.
      */
     public boolean atWorldEdge()
     {
@@ -39,24 +41,25 @@ public class Animal extends Actor
     
     
     /**
-     * Return true if we can see an object of class 'clss' right where we are. 
-     * False if there is no such object here.
+     * Return actor if we can see an object of class 'anyClass' 
+     * right where we are. 
      */
-    public boolean canSee(Class clss)
+    public Actor canSee(Class anyClass)
     {
-        Actor actor = getOneObjectAtOffset(0, 0, clss);
-        return actor != null;        
+        Actor actor = getOneObjectAtOffset(0, 0, anyClass);
+        return actor;        
     }
-
     
     /**
-     * Try to eat an object of class 'clss'. This is only successful if there
-     * is such an object where we currently are. Otherwise this method does
+     * Try to eat an object of class 'foodClass'. 
+     * This is only successful if there is such an object 
+     * where we currently are. Otherwise this method does
      * nothing.
      */
-    public void eat(Class clss)
+    public void eat(Class foodClass)
     {
-        Actor actor = getOneObjectAtOffset(0, 0, clss);
+        Actor actor = canSee(foodClass);
+        
         if(actor != null) {
             getWorld().removeObject(actor);
         }
