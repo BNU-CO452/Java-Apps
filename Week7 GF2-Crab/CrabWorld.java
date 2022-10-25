@@ -1,4 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.Random;
 
 /**
  * In this game the player controls a crab which
@@ -19,9 +20,10 @@ public class CrabWorld extends World
     private Lobster lobster;
     
     private Worm[] worms;
-    private int wormSize;
+    private int wormSize = 30;
     private int remainingWorms = MAXN_WORMS;
     
+    private Random generator = new Random();
     private Counter score;
     
     /**
@@ -30,7 +32,6 @@ public class CrabWorld extends World
      */
     public CrabWorld()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(MAX_WIDTH, MAX_HEIGHT, 1); 
         
         crab = new Crab();
@@ -41,7 +42,6 @@ public class CrabWorld extends World
         
         worms = new Worm[MAXN_WORMS];
         
-        wormSize = 30;
         addWorms();
         
         setupScore();
@@ -52,7 +52,7 @@ public class CrabWorld extends World
      */
     public void addWorms()
     {
-
+        createWorm();
     }
     
     /**
@@ -61,6 +61,12 @@ public class CrabWorld extends World
      */
     private void createWorm()
     {
+        Worm worm = new Worm();
+        
+        int x = generator.nextInt(getWidth());
+        int y = generator.nextInt(getHeight());
+        
+        addObject(worm, x, y);
     }
     
     public void score()
