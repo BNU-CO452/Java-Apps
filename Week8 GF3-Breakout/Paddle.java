@@ -9,8 +9,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Paddle extends ShapeSprite
 {
-    protected int speed = 4;
-    
     /**
      * Create a blue rectangle using a Greenfoot Image
      * 
@@ -30,8 +28,8 @@ public class Paddle extends ShapeSprite
     }
     
     /**
-     * This method moves the paddle around in two directions
-     * using coordinate positions.  
+     * This method moves the paddle up or down at the 
+     * current speed.  
      */
     public void move()
     {
@@ -50,8 +48,4 @@ public class Paddle extends ShapeSprite
         setLocation(x, y);
     }
  
-    public void setSpeed(int speed)
-    {
-        this.speed = speed;
-    }
 }

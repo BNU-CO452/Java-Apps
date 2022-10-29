@@ -11,6 +11,7 @@ public class GameWorld extends World
 {
     private static final int SCREEN_WIDTH = 600;
     private static final int SCREEN_HEIGHT = 400; 
+    
     private Paddle paddle;
     private Ball ball;
     

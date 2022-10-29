@@ -11,7 +11,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Ball extends ShapeSprite
 {
     private GameWorld game;
-    private int speed = 4;
     
     // Current velocity change in x and y
     
