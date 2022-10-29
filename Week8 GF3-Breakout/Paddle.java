@@ -30,24 +30,12 @@ public class Paddle extends ShapeSprite
     }
     
     /**
-     * This method moves the paddle around in four directions
-     * using coordinate positions.  Could use turtle graphics 
-     * instead without x,y coordinates.
+     * This method moves the paddle around in two directions
+     * using coordinate positions.  
      */
     public void move()
     {
         int x = getX(); int y = getY();
-        int halfWidth = width / 2;
-        
-        if(Greenfoot.isKeyDown("left") && x > halfWidth)
-        {
-            x -= speed;
-        }
-        
-        if(Greenfoot.isKeyDown("right") && !isAtEdge())
-        {
-            x += speed;
-        }        
         
         if(Greenfoot.isKeyDown("down") && !isAtEdge())
         {

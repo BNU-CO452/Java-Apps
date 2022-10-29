@@ -1,8 +1,8 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * This is a basic drawable object based on Actor
- * The Shape can be Rectangular or Oval.
+ * This is a basic Actor where the image
+ * is a drawn shape such as a Rectangle or Oval.
  * 
  * @author Derek Peacock
  * @version 0
@@ -10,6 +10,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class ShapeSprite extends Actor
 {
     protected Shapes shape;
+    
     protected int width;
     protected int height;
     
@@ -43,7 +44,6 @@ public class ShapeSprite extends Actor
         // Add your action code here.
     }
     
-    
     public void setColor(Color color)
     {
         image.setColor(color);
@@ -52,5 +52,10 @@ public class ShapeSprite extends Actor
             image.fill();
         else
             image.fillOval(0, 0, width, height);
-    }    
+    }
+    
+    public void setSpeed(int speed)
+    {
+        this.speed = speed;
+    }
 }

@@ -1,26 +1,28 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 
 /**
- * Write a description of class MyWorld here.
+ * This is based on the class game of Atari Breakout
+ * Game first released in 1976.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
 public class GameWorld extends World
 {
+    private static final int SCREEN_WIDTH = 600;
+    private static final int SCREEN_HEIGHT = 400; 
     private Paddle paddle;
     private Ball ball;
     
     private Counter score;
     
     /**
-     * Constructor for objects of class MyWorld.
-     * 
+     * Set the screen size, then create a paddle, ball
+     * and a score button. Setup lines of bricks.
      */
     public GameWorld()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(SCREEN_WIDTH, SCREEN_HEIGHT, 1); 
         
         paddle = new Paddle(10, 80);
         ball = new Ball(20,20);
